@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/answer.dart';
 
 import './question.dart';
 
@@ -38,16 +39,9 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Question(questions[_questionIndex]),
-            RaisedButton(child: Text('question 1'), onPressed: _answerQuestion),
-            RaisedButton(
-                child: Text('question 2'),
-                onPressed: () => print('Answer 2 chosen!')),
-            RaisedButton(
-                child: Text('question 3'),
-                onPressed: () {
-                  //...
-                  print('Answer 3 chosen!');
-                }),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),
